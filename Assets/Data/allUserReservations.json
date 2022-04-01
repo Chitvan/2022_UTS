@@ -1,0 +1,42 @@
+{
+	"userReservations" : [
+	{
+		"userName" : "Jacinda", 
+		"reservedMovies" : [
+		{
+			"movieName" : "Inception",
+			"selectedTime" : "7:30 pm",
+			"selectedDate" : "4/1/2022",
+			"selectedSeat" : "2A",
+			"selectedScreen" : "Screen1"
+		},
+		{
+			"movieName" : "Harvey",
+			"selectedTime" : "2:30 pm",
+			"selectedDate" : "4/2/2022",
+			"selectedSeat" : "5A",
+			"selectedScreen" : "Screen2"
+		}
+		]
+	},
+	{
+		"userName" : "Greta",
+		"reservedMovies" : [
+			{
+				"movieName" : "Dark Knight",
+				"selectedTime" : "2:30 pm",
+				"selectedDate" : "4/2/2022",
+				"selectedSeat" : "2A",
+				"selectedScreen" : "Screen3"
+			},
+			{
+				"movieName" : "Matrix",
+				"selectedTime" : "2:30 pm",
+				"selectedDate" : "4/3/2022",
+				"selectedSeat" : "5A",
+				"selectedScreen" : "Screen4"
+			}
+		]
+	}
+	]
+}

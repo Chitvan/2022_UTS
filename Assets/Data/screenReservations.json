@@ -1,0 +1,24 @@
+{
+	"screenReservations" : [
+	{
+		"screenReservationKey" : "Screen1_Inception_4/4/2022_7:30 pm", 
+		"reservedSeats" : [ "2A", "5A"]
+	},
+	{
+		"screenReservationKey" : "Screen2_Harvey_4/4/2022_7:30 pm",
+		"reservedSeats" : [ "1A", "2A", "2B", "4C"]
+	},
+	{
+		"screenReservationKey" : "Screen2_Harvey_4/5/2022_7:30 pm", 
+		"reservedSeats" : [ "2A", "5A"]
+	},
+	{
+		"screenReservationKey" : "Screen3_Dark Knight_4/5/2022_7:30 pm", 
+		"reservedSeats" : [ "2A", "5A", "3B"]
+	},
+	{
+		"screenReservationKey" : "Screen4_Matrix_4/4/2022_7:30 pm", 
+		"reservedSeats" : [ "2A", "5A"]
+	}
+	]
+}
