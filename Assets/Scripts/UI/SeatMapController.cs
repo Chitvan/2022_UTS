@@ -16,7 +16,9 @@ namespace UI
         [SerializeField] private NetworkDataBridge networkDataBridge;
 
         private ReservedMovie reservedMovie;
-        
+        private GameObject instantiatedScreenObject;
+
+
         public void Setup(string timeSelected, Movie movieSelected, DateTime dateSelected)
         {
             selectedMovieDetails.text = movieSelected.name + " " + dateSelected.Date.ToShortDateString() + " " + timeSelected;
@@ -26,8 +28,8 @@ namespace UI
             {
                 if (movieSelected.screenName == screenPrefab.name)
                 {
-                    GameObject screenObject = Instantiate(screenPrefab, transform);
-                    ScreenView screenView = screenObject.GetComponent<ScreenView>();
+                    instantiatedScreenObject = Instantiate(screenPrefab, transform);
+                    ScreenView screenView = instantiatedScreenObject.GetComponent<ScreenView>();
                     screenView.Setup(networkDataBridge.GetReservationsForScreen(reservedMovie));
                     screenView.seatSelected = DidConfirmSelectedSeat;
                     break;
@@ -45,6 +47,8 @@ namespace UI
             networkDataBridge.SaveNewReservation(reservedMovie);
 
             reservationsGridController.Setup(new List<ReservedMovie>{reservedMovie});
+
+            Destroy(instantiatedScreenObject); // ideally I'd use object pooling instead 
         }
     }
 }
