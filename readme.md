@@ -9,7 +9,7 @@ I enjoyed working on this test. Here is a general approach I used to divide my t
 
 
 Running the application: 
-- When you start the project in Unity, you'd need to add add a username to make or view reservations. 
+- When you start the project in Unity, you'd need to add a username to make or view reservations. 
 - If you use the username **Jacinda** or **Greta**, you can view existing reservations. 
 - Existing reservations are saved in screenReservations.json. If you select date April 4 or 5 and select 7:30pm slot for Harvey movie, you can see some reserved slots in the seat map. 
 - There is some prepopulated data. Otherwise, while the application is playing, the data will be saved in dictionaries in NetworkDataBridge.cs
