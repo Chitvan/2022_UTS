@@ -33,12 +33,5 @@ namespace UI
         {
             OnTimeMovieSelect?.Invoke(timeSelected, cellMovie);
         }
-        
-        public void LoadTexture()
-        {
-            //string imageFilePath = Application.dataPath + dataURL + movieName.text.ToLower() + "jpeg";
-            
-           
-        }
     }
 }

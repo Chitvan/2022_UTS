@@ -1,24 +1,44 @@
 {
-	"screenReservations" : [
-	{
-		"screenReservationKey" : "Screen1_Inception_4/4/2024_7:30 pm", 
-		"reservedSeats" : [ "2A", "5A"]
-	},
-	{
-		"screenReservationKey" : "Screen2_Harvey_4/4/2024_7:30 pm",
-		"reservedSeats" : [ "1A", "2A", "2B", "4C"]
-	},
-	{
-		"screenReservationKey" : "Screen2_Harvey_4/5/2024_7:30 pm", 
-		"reservedSeats" : [ "2A", "5A"]
-	},
-	{
-		"screenReservationKey" : "Screen3_Dark Knight_4/5/2024_7:30 pm", 
-		"reservedSeats" : [ "2A", "5A", "3B"]
-	},
-	{
-		"screenReservationKey" : "Screen4_Matrix_4/4/2024_7:30 pm", 
-		"reservedSeats" : [ "2A", "5A"]
-	}
+	"screenReservations": [
+		{
+			"screenReservationKey": "Screen1_Inception_2/19/2024_7:30 pm",
+			"reservedSeats": [ "2A", "5A" ]
+		},
+		{
+			"screenReservationKey": "Screen2_Harvey_2/18/2024_7:30 pm",
+			"reservedSeats": [ "1A", "2A", "2B", "4C", "5A" ]
+		},
+		{
+			"screenReservationKey": "Screen2_Harvey_2/19/2024_7:30 pm",
+			"reservedSeats": [ "2A", "5A" ]
+		},
+		{
+			"screenReservationKey": "Screen3_Dark Knight_2/20/2024_7:30 pm",
+			"reservedSeats": [ "2A", "5A", "3B" ]
+		},
+		{
+			"screenReservationKey": "Screen4_Matrix_2/21/2024_7:30 pm",
+			"reservedSeats": [ "2A", "5A" ]
+		},
+		{
+			"screenReservationKey": "Screen1_Inception_2/20/2024_2:30 pm",
+			"reservedSeats": [ "2A", "5A" ]
+		},
+		{
+			"screenReservationKey": "Screen2_Harvey_2/21/2024_2:30 pm",
+			"reservedSeats": [ "1A", "2A", "2B", "4C", "5A" ]
+		},
+		{
+			"screenReservationKey": "Screen2_Harvey_2/19/2024_2:30 pm",
+			"reservedSeats": [ "2A", "5A" ]
+		},
+		{
+			"screenReservationKey": "Screen3_Dark Knight_2/20/2024_2:30 pm",
+			"reservedSeats": [ "2A", "5A", "3B" ]
+		},
+		{
+			"screenReservationKey": "Screen4_Matrix_2/21/2024_2:30 pm",
+			"reservedSeats": [ "2A", "5A" ]
+		}
 	]
 }

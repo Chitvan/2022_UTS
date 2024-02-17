@@ -16,23 +16,34 @@ namespace UI
         [SerializeField] private NetworkDataBridge networkDataBridge;
 
         private ReservedMovie reservedMovie;
-        private GameObject instantiatedScreenObject;
-
+        private GameObject selectedScreenObject;
+        private Dictionary<string, GameObject> screenMap = new Dictionary<string, GameObject>();
 
         public void Setup(string timeSelected, Movie movieSelected, DateTime dateSelected)
         {
             selectedMovieDetails.text = movieSelected.name + " " + dateSelected.Date.ToShortDateString() + " " + timeSelected;
             reservedMovie = new ReservedMovie(movieSelected.name, timeSelected, dateSelected.Date.ToShortDateString(), "", movieSelected.screenName);
 
-            foreach (GameObject screenPrefab in screenPrefabs)
+            if(screenMap.ContainsKey(movieSelected.screenName))
             {
-                if (movieSelected.screenName == screenPrefab.name)
+                selectedScreenObject = screenMap[movieSelected.screenName];
+                ScreenView screenView = selectedScreenObject.GetComponent<ScreenView>();
+                screenView.Setup(networkDataBridge.GetReservationsForScreen(reservedMovie));
+                selectedScreenObject.SetActive(true);
+            }
+            else
+            {
+                foreach (GameObject screenPrefab in screenPrefabs)
                 {
-                    instantiatedScreenObject = Instantiate(screenPrefab, transform);
-                    ScreenView screenView = instantiatedScreenObject.GetComponent<ScreenView>();
-                    screenView.Setup(networkDataBridge.GetReservationsForScreen(reservedMovie));
-                    screenView.seatSelected = DidConfirmSelectedSeat;
-                    break;
+                    if (movieSelected.screenName == screenPrefab.name)
+                    {
+                        selectedScreenObject = Instantiate(screenPrefab, transform);
+                        ScreenView screenView = selectedScreenObject.GetComponent<ScreenView>();
+                        screenView.Setup(networkDataBridge.GetReservationsForScreen(reservedMovie));
+                        screenView.seatSelected = DidConfirmSelectedSeat;
+                        screenMap.Add(movieSelected.screenName, selectedScreenObject);
+                        break;
+                    }
                 }
             }
         }
@@ -47,8 +58,14 @@ namespace UI
             networkDataBridge.SaveNewReservation(reservedMovie);
 
             reservationsGridController.Setup(new List<ReservedMovie>{reservedMovie});
+        }
 
-            Destroy(instantiatedScreenObject); // ideally I'd use object pooling instead 
+        private void OnDisable()
+        {
+            foreach(GameObject screenView in screenMap.Values)
+            {
+                screenView.gameObject.SetActive(false);
+            }
         }
     }
 }
