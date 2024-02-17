@@ -1,17 +1,16 @@
 Purpose: 
 a visual representation of a movie theater seat reservation system that includes a front end written in Unity and a backend data storage in runtime memory and json blobs of files. Features
-include a list of movies and times and a view of seats that are available and already reserved. It is functional, but not production quality. It was build in approximately 10 hours spread over 5 days. 
+include a list of movies and times and a view of seats that are available and already reserved. The code is functional, but not production quality. The project was built in approximately 10 hours spread over 5 days. 
 - Day 1: Plan 
 - Day 2: Build UI 
 - Day 3: Build data base with UI
 - Day 4: Add backend support
 - Day 5: Polish
-- 
 
 Running the application: 
 - When you start the project in Unity, you'd need to add a username to make or view reservations. 
 - If you use the username **Jacinda** or **Greta**, you can view existing reservations. 
-- Existing reservations are saved in screenReservations.json. If you select date Feb 16 or 5 and select 7:30pm slot for Harvey movie, you can see some reserved slots in the seat map. 
+- Existing reservations are saved in screenReservations.json. If you select date Feb 19 or 20 and select 7:30pm slot for Harvey movie, you can see some reserved slots in the seat map. 
 - There is some prepopulated data. Otherwise, while the application is playing, the data will be saved in dictionaries in NetworkDataBridge.cs
 
 Known bugs/polish items:
